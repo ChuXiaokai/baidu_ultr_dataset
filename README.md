@@ -66,7 +66,7 @@ Pos N, Url_md5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 The expert annotation dataset is aviable at [here](https://drive.google.com/drive/folders/1AmLTDNVltS02cBMIVJJLfVc_xIrLA2cL?usp=sharing).
 The Schema of the [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
 |Column Id|Explaination|Remark|
-|---:|---:|---:|
+|:---|:---|:---|
 |1|query id|Explaination||
 |2|query tokens|sep by "\x01"|
 |3|abstract tokens|sep by "\x01"|

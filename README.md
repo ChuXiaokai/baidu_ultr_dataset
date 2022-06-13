@@ -71,9 +71,9 @@ The Schema of the [nips_annotation_data_0522.txt](https://drive.google.com/file/
 |Title|The title of document.|Sequential token ids seprated by "\x01".|
 |Abstract|A query-related brief introduction of document under the title.|Sequential token ids seprated by "\x01".|
 |Label|Expert annotation label.|\[0,4\]|
-|Bucket|The queries are descendingly split into 10 buckets according to their monthly search frequency, i.e., bucket 0, bucket 1, and bucket 2 are high-frequency queries while bucket 7, bucket 8, and bucket 9 are the tail queries|\[0,9\]|
-The [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) is a unigram
-set that records the high-frequency words using the desensitization token id.
+|Bucket|The queries are descendingly split into 10 buckets according to their monthly search frequency, i.e., bucket 0, bucket 1, and bucket 2 are high frequency queries while bucket 7, bucket 8, and bucket 9 are the tail queries|\[0,9\]|
+
+The [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) is a unigram set that records the high-frequency words using the desensitization token id.
 
 ### Contact
 To ask questions or report issues, please open an issue on the [issues tracker](https://github.com/ChuXiaokai/baidu_ultr_dataset/issues).

@@ -28,7 +28,7 @@ Pos N, Url_md5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 |:---|:---|:---|
 |Qid|query id||
 |Query|The user issued query|Sequential token ids seprated by "\x01".|
-|Query_reformulation|The subsequent queries issued by users under the same search goal. A session can have multiple queries.|Sequential token ids seprated by "\x01".|
+|Query_reformulation|The subsequent queries issued by users under the same search goal.|Sequential token ids seprated by "\x01".|
 |Pos|The document’s displaying order on the screen.|\[1,30\]|
 |Url_md5|The md5 for identifying the url||
 |Title|The title of document.|Sequential token ids seprated by "\x01".|

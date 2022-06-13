@@ -12,24 +12,53 @@ Quick Start: ""
 The large scale web search session are aviable at [here](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing).
 The search session is organized as:
 ```
-qid, query, query_reformulation
-pos 1, url_md5, title, abstract, page_type, click, fm, g_st, skip, height, view_time, view_time_middle, count_first_click,view_count, max_show_height, slipoff_after_click, click_time, view_time_up, top, view_count_up, view_count_down, slipoff_times, srcid, final_click_count, view_time_down, click_count, full_view_count, tpl, count_last_click, reverse_view_cnt, view_count_middle, full_view_time
-pos 2, url_md5, title, abstract, page_type, click, fm, g_st, skip, height, view_time, view_time_middle, count_first_click,view_count, max_show_height, slipoff_after_click, click_time, view_time_up, top, view_count_up, view_count_down, slipoff_times, srcid, final_click_count, view_time_down, click_count, full_view_count, tpl, count_last_click, reverse_view_cnt, view_count_middle, full_view_time
+Qid, Query, Query_reformulation
+Pos 1, Url_md5, Title, Abstract, Multimedia_type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
+Pos 2, Url_md5, Title, Abstract, Multimedia_type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
 ......
-pos N
+Pos N, Url_md5, Title, Abstract, Multimedia_type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
 ```
 |Column Id|Explaination|Remark|
-|---:|---:|---:|
-|qid|query id||
-|query|query tokens|sep by "\x01"|
-|query_reformulation|query reformulation tokens|sep by "\x01"|
-|pos N|the ranking position of current url|\[1,30\]|
-|url_md5|the md5 for identifying the url||
-|title|title tokens|sep by "\x01"|
-|abstract|abstract tokens|sep by "\x01"|
-|page_type| the multi-media type of the page||
-|click|||
-
+|:---|:---|:---|
+|Qid|query id||
+|Query|the user issued query|Sequential token ids seprated by "\x01".|
+|Query_reformulation|The subsequent queries issued by users under the same
+search goal. A session can have multiple queries.|Sequential token ids seprated by "\x01".|
+|Pos|The document’s displaying order on the screen.|\[1,30\]|
+|Url_md5|The md5 for identifying the url||
+|Title|The title of document.|Sequential token ids seprated by "\x01".|
+|Abstract|A query-related brief introduction of document under the title.|Sequential token ids seprated by "\x01".|
+|multimedia_type|The type of url, for example, advertisement, videos, maps.|int|
+|Click|Whether user clicked the document.|\[0,1\]|
+|-|-|-|
+|-|-|-|
+|Skip|Whether user skipped the document on the screen.|\[0,1\]|
+|SERP Height|The vertical pixels of SERP on the screen.|Continuous Value|
+|Displayed Time|The document's display time on the screen.|Continuous Value|
+|Displayed Time Middle|The document’s display time on the middle 1/3 of screen.|Continuous Value|
+|First Click|The identifier of users’ first click in a query.|\[0,1\]|
+|Displayed Count|The document’s display count on the screen.|Discrete Number|
+|SERP's Max Show Height|The max vertical pixels of SERP on the screen.|Continuous Value|
+|Slipoff Count After Click |The count of slipoff after user click the document.|Discrete Number|
+|Dwelling Time|The length of time a user spends looking at a document
+after they’ve clicked a link on a SERP page, but before
+clicking back to the SERP results.|Continuous Value|
+|Displayed Time Top|The document’s display time on the top 1/3 of screen.|Continuous Value|
+|SERP to Top|The vertical pixels of the SERP to the top of the screen.|Continuous Value|
+|Displayed Count Top|The document’s display count on the top 1/3 of screen.|Discrete Number|
+|Displayed Count Bottom|The document’s display count on the bottom 1/3 of screen.|Discrete Number|
+|Slipoff Count|The count of document being sliped off the screen.||
+|-|-|-|
+|Final Click |The identifier of users’ last click in a query session.||
+|Displayed Time Bottom|The document’s display time on the bottom 1/3 of screen.|Continuous Value|
+|Click Count|The document’s click count.|Discrete Number|
+|Displayed Count|The document’s display count on the screen.|Discrete Number|
+|-|-|-|
+|Last Click |The identifier of users’ last click in a query.|Discrete Number|
+|Reverse Display Count|The document’s display count of user view with
+a reverse browse order from bottom to the top.|Discrete Number|
+|Displayed Count Middle|The document’s display count on the middle 1/3 of screen.|Discrete Number|
+|-|-|-|
 
 ### The Pre-trained Language Model
 You can download the pre-trained language model from the table below:
@@ -38,7 +67,7 @@ You can download the pre-trained language model from the table below:
 |---:|---:|
 | **L=12** |[**12/768 (Baidu_ULTR_Base)**][12_768]|
 
-### Expert Annotation Dataset 
+### Expert Annotation Dataset for Validation, Test or Fine-tuning.
 The expert annotation dataset is aviable at [here]().
 The Schema of the [nips_test_0522.txt]:
 |Column Id|Explaination|Remark|

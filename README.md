@@ -23,7 +23,7 @@ Pos 1, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 Pos 2, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle, First Click, Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
 ......
 Pos N, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle, First Click, Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
-\# SERP is the abbreviation of search result page.
+# SERP is the abbreviation of search result page.
 ```
 
 

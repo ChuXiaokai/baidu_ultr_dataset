@@ -18,17 +18,20 @@ You can download the pre-trained language model from the table below:
 The large scale web search session are aviable at [here](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing).
 The search session is organized as:
 ```
-Qid, Query, Query_reformulation
-Pos 1, Url_md5, Title, Abstract, Multimedia_type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
-Pos 2, Url_md5, Title, Abstract, Multimedia_type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
+Qid, Query, Query Reformulation
+Pos 1, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle, First Click, Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
+Pos 2, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle, First Click, Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
 ......
-Pos N, Url_md5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
+Pos N, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle, First Click, Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
+\# SERP is the abbreviation of search result page.
 ```
+
+
 |Column Id|Explaination|Remark|
 |:---|:---|:---|
 |Qid|query id||
 |Query|The user issued query|Sequential token ids seprated by "\x01".|
-|Query_reformulation|The subsequent queries issued by users under the same search goal.|Sequential token ids seprated by "\x01".|
+|Query Reformulation|The subsequent queries issued by users under the same search goal.|Sequential token ids seprated by "\x01".|
 |Pos|The document’s displaying order on the screen.|\[1,30\]|
 |Url_md5|The md5 for identifying the url||
 |Title|The title of document.|Sequential token ids seprated by "\x01".|

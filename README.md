@@ -64,14 +64,17 @@ You can download the pre-trained language model from the table below:
 | **L=12** |[**12/768 (Baidu_ULTR_Base)**][12_768]|
 
 ### Expert Annotation Dataset for Validation, Test or Model Fine-tuning.
-The expert annotation dataset is aviable at [here]().
-The Schema of the [nips_test_0522.txt]:
+The expert annotation dataset is aviable at [here](https://drive.google.com/drive/folders/1AmLTDNVltS02cBMIVJJLfVc_xIrLA2cL?usp=sharing).
+The Schema of the [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
 |Column Id|Explaination|Remark|
 |---:|---:|---:|
 |1|query id|Explaination||
 |2|query tokens|sep by "\x01"|
 |3|abstract tokens|sep by "\x01"|
 |4|annotation label|\[0,4\]|
+|5|query bucket|\[0,9\]|
+The [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) is a unigram
+set that records the high-frequency words using the desensitization token id.
 
 ### Contact
 To ask questions or report issues, please open an issue on the [issues tracker](https://github.com/ChuXiaokai/baidu_ultr_dataset/issues).

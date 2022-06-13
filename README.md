@@ -1,4 +1,4 @@
-# A Large Scale Search Dataset from Baidu Search Engine ([Homepage](www.baidu-ultr.com)).
+# A Large Scale Search Dataset from Baidu Search Engine
 This repo contains code & dataset accompaning the paper, [A Large Scale Search Dataset for Unbiased Learning to Rank](https://arxiv.org/). 
 
 ### Dependencies

@@ -7,6 +7,12 @@ This code requires the following:
 ### Usage
 Quick Start: ""
 
+### The Pre-trained Language Model
+You can download the pre-trained language model from the table below:
+
+|   |H=768|
+|---:|---:|
+| **L=12** |[Baidu_ULTR_Base_12_768](https://drive.google.com/file/d/1Ft7DGH66fVOqQCMym57OeApp5NA2Y3Oc/view?usp=sharing)|
 
 ### Large Scale Web Search Session Data
 The large scale web search session are aviable at [here](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing).
@@ -55,13 +61,6 @@ Pos N, Url_md5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 |Reverse Display Count|The document’s display count of user view with a reverse browse order from bottom to the top.|Discrete Number|
 |Displayed Count Middle|The document’s display count on the middle 1/3 of screen.|Discrete Number|
 |-|-|-|
-
-### The Pre-trained Language Model
-You can download the pre-trained language model from the table below:
-
-|   |H=768|
-|---:|---:|
-| **L=12** |[**12/768 (Baidu_ULTR_Base)**][12_768]|
 
 ### Expert Annotation Dataset for Validation, Test or Model Fine-tuning.
 The expert annotation dataset is aviable at [here](https://drive.google.com/drive/folders/1AmLTDNVltS02cBMIVJJLfVc_xIrLA2cL?usp=sharing).

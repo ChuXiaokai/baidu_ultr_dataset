@@ -63,7 +63,7 @@ You can download the pre-trained language model from the table below:
 |---:|---:|
 | **L=12** |[**12/768 (Baidu_ULTR_Base)**][12_768]|
 
-### Expert Annotation Dataset for Validation, Test or Fine-tuning.
+### Expert Annotation Dataset for Validation, Test or Model Fine-tuning.
 The expert annotation dataset is aviable at [here]().
 The Schema of the [nips_test_0522.txt]:
 |Column Id|Explaination|Remark|

@@ -65,13 +65,13 @@ Pos N, Url_md5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 ### Expert Annotation Dataset for Validation, Test or Model Fine-tuning.
 The expert annotation dataset is aviable at [here](https://drive.google.com/drive/folders/1AmLTDNVltS02cBMIVJJLfVc_xIrLA2cL?usp=sharing).
 The Schema of the [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
-|Column Id|Explaination|Remark|
+|Columns|Explaination|Remark|
 |:---|:---|:---|
-|1|query id|Explaination||
-|2|query tokens|sep by "\x01"|
-|3|abstract tokens|sep by "\x01"|
-|4|annotation label|\[0,4\]|
-|5|query bucket|\[0,9\]|
+|Query|The user issued query|Sequential token ids seprated by "\x01".|
+|Title|The title of document.|Sequential token ids seprated by "\x01".|
+|Abstract|A query-related brief introduction of document under the title.|Sequential token ids seprated by "\x01".|
+|Label|Expert annotation label.|\[0,4\]|
+|Bucket|The queries are descendingly split into 10 buckets according to their monthly search frequency, i.e., bucket 0, bucket 1, and bucket 2 are high-frequency queries while bucket 7, bucket 8, and bucket 9 are the tail queries|\[0,9\]|
 The [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) is a unigram
 set that records the high-frequency words using the desensitization token id.
 

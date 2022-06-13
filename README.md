@@ -22,8 +22,7 @@ Pos N, Url_md5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 |:---|:---|:---|
 |Qid|query id||
 |Query|the user issued query|Sequential token ids seprated by "\x01".|
-|Query_reformulation|The subsequent queries issued by users under the same
-search goal. A session can have multiple queries.|Sequential token ids seprated by "\x01".|
+|Query_reformulation|The subsequent queries issued by users under the same search goal. A session can have multiple queries.|Sequential token ids seprated by "\x01".|
 |Pos|The document’s displaying order on the screen.|\[1,30\]|
 |Url_md5|The md5 for identifying the url||
 |Title|The title of document.|Sequential token ids seprated by "\x01".|
@@ -40,9 +39,7 @@ search goal. A session can have multiple queries.|Sequential token ids seprated 
 |Displayed Count|The document’s display count on the screen.|Discrete Number|
 |SERP's Max Show Height|The max vertical pixels of SERP on the screen.|Continuous Value|
 |Slipoff Count After Click |The count of slipoff after user click the document.|Discrete Number|
-|Dwelling Time|The length of time a user spends looking at a document
-after they’ve clicked a link on a SERP page, but before
-clicking back to the SERP results.|Continuous Value|
+|Dwelling Time|The length of time a user spends looking at a document after they’ve clicked a link on a SERP page, but before clicking back to the SERP results.|Continuous Value|
 |Displayed Time Top|The document’s display time on the top 1/3 of screen.|Continuous Value|
 |SERP to Top|The vertical pixels of the SERP to the top of the screen.|Continuous Value|
 |Displayed Count Top|The document’s display count on the top 1/3 of screen.|Discrete Number|
@@ -55,8 +52,7 @@ clicking back to the SERP results.|Continuous Value|
 |Displayed Count|The document’s display count on the screen.|Discrete Number|
 |-|-|-|
 |Last Click |The identifier of users’ last click in a query.|Discrete Number|
-|Reverse Display Count|The document’s display count of user view with
-a reverse browse order from bottom to the top.|Discrete Number|
+|Reverse Display Count|The document’s display count of user view with a reverse browse order from bottom to the top.|Discrete Number|
 |Displayed Count Middle|The document’s display count on the middle 1/3 of screen.|Discrete Number|
 |-|-|-|
 

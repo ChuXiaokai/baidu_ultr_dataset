@@ -16,7 +16,7 @@ Qid, Query, Query_reformulation
 Pos 1, Url_md5, Title, Abstract, Multimedia_type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
 Pos 2, Url_md5, Title, Abstract, Multimedia_type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
 ......
-Pos N, Url_md5, Title, Abstract, Multimedia_type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
+Pos N, Url_md5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height, Displayed Time, Displayed Time Middle,First Click,Displayed Count, SERP's Max Show Height, Slipoff Count After Click, Dwelling Time , Displayed Time Top, SERP to Top , Displayed Count Top, Displayed Count Bottom, Slipoff Count, -, Final Click, Displayed Time Bottom, Click Count, Displayed Count, -, Last Click , Reverse Display Count, Displayed Count Middle, -
 ```
 |Column Id|Explaination|Remark|
 |:---|:---|:---|
@@ -28,7 +28,7 @@ search goal. A session can have multiple queries.|Sequential token ids seprated 
 |Url_md5|The md5 for identifying the url||
 |Title|The title of document.|Sequential token ids seprated by "\x01".|
 |Abstract|A query-related brief introduction of document under the title.|Sequential token ids seprated by "\x01".|
-|multimedia_type|The type of url, for example, advertisement, videos, maps.|int|
+|Multimedia Type|The type of url, for example, advertisement, videos, maps.|int|
 |Click|Whether user clicked the document.|\[0,1\]|
 |-|-|-|
 |-|-|-|

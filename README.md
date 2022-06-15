@@ -3,9 +3,32 @@ This repo contains code & dataset accompaning the paper, [A Large Scale Search D
 
 ### Dependencies
 This code requires the following:
+- Python 3.6+
+- Pytorch 1.10.2 + CUDA 10.2
 
-### Usage
-Quick Start: ""
+### Quick Start
+
+#### 0. Prepare the corpus
+Suppose your have downloaded the Web Search Session Data (training data) and [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) (test data).
+
+First, move all the zip file into dir './data/train_data/', e.g.,
+> ```mv yourpath/*.gz ./data/train_data/```
+
+Second, move the file **part-00000.gz** into './data/click_data/', we will treat it as one of the validation set.
+> ```mv ./data/train_data/part-00000.gz ./data/click_data/part-00000.gz``` 
+
+Finally, split the annotated data [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) into test and validation set. Move them into dir './data/annotate_data/'
+> ```mv test_data.txt ./data/annotate_data/```
+> ```mv val_data.txt ./data/annotate_data/```
+
+#### Pretrain Transformer
+We adopt two tasks **CTR** prediction and **MLM** to pretrain the Transformer. For example, to pretrain a 12-Layers Transformer, you can type the following command
+> ``` python pretrain.py --emb_dim 768 --nlayer 12 --nhead 12 --dropout 0.1 ```
+#### Training Baselines
+We select five representative baselines to test this dataset, which are Naive, IPW, DLA, REM and PairD. The code and hyper-parameters setting refer to [ULTR-Community](https://github.com/ULTR-Community/ULTRA_pytorch). For example, to train a base model IPW, you can type the following command
+> ``` python finetune.py --method_name IPW```
+
+The explanation of the input parameters, you can refer to args.py.
 
 ### The Pre-trained Language Model
 You can download the pre-trained language model from the table below:

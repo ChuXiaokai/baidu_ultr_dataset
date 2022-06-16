@@ -9,7 +9,7 @@ This code requires the following:
 ### Quick Start
 
 #### 0. Prepare the corpus
-Suppose your have downloaded the Web Search Session Data (training data) and [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) (test data).
+Suppose your have downloaded the Web Search Session Data (training data) and [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing) (test data).
 
 First, move all the zip file into dir './data/train_data/', e.g.,
 > ```mv yourpath/*.gz ./data/train_data/```
@@ -17,7 +17,7 @@ First, move all the zip file into dir './data/train_data/', e.g.,
 Second, move the file **part-00000.gz** into './data/click_data/', we will treat it as one of the validation set.
 > ```mv ./data/train_data/part-00000.gz ./data/click_data/part-00000.gz``` 
 
-Finally, split the annotated data [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) into test and validation set. Move them into dir './data/annotate_data/'
+Finally, split the annotated data [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing) into test and validation set. Move them into dir './data/annotate_data/'
 > ```mv test_data.txt ./data/annotate_data/```
 > ```mv val_data.txt ./data/annotate_data/```
 

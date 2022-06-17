@@ -30,7 +30,6 @@ parser.add_argument("--eval_batch_size", type=int, default=2000, help='The batch
 # parameters for training
 parser.add_argument("--n_gpus", type=int, default=2, help='The number of GPUs.')
 parser.add_argument("--lr", type=float, default=2e-6, help='The max learning rate for pre-training, and the learning rate for finetune.')
-parser.add_argument("--end_learning_rate", type=float, default=8e-8, help='The end learning rate in warming up.')
 parser.add_argument("--max_steps", type=int, default=100000, help='The max number of training steps.')
 parser.add_argument("--warmup_steps", type=int, default=4000)
 parser.add_argument("--weight_decay", type=float, default=0.01)

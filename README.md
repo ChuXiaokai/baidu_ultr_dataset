@@ -37,7 +37,7 @@ You can download the pre-trained language model from the table below:
 |---:|---:|
 | **L=12** |[Baidu_ULTR_Base_12_768](https://drive.google.com/file/d/1Ft7DGH66fVOqQCMym57OeApp5NA2Y3Oc/view?usp=sharing)|
 
-### Large Scale Web Search Session Data
+### Train Data --- Large Scale Web Search Session Data
 The large scale web search session are aviable at [here](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing).
 The search session is organized as:
 ```
@@ -88,7 +88,7 @@ Pos N, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 |Displayed Count Middle|The document’s display count on the middle 1/3 of screen.|Discrete Number|
 |-|-|-|
 
-### Expert Annotation Dataset for Validation, Test or Model Fine-tuning.
+### Test Data --- Expert Annotation Dataset for Validation, 
 The expert annotation dataset is aviable at [here](https://drive.google.com/drive/folders/1AmLTDNVltS02cBMIVJJLfVc_xIrLA2cL?usp=sharing).
 The Schema of the [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
 |Columns|Explaination|Remark|

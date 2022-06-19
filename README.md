@@ -35,9 +35,9 @@ You can download the pre-trained language model from the table below:
 
 |   |Head=12|
 |---:|---:|
-| **Layer=12** |[Baidu_ULTR_Base_12L_12H_768Emb](https://drive.google.com/file/d/1Ft7DGH66fVOqQCMym57OeApp5NA2Y3Oc/view?usp=sharing)|
-| **Layer=6** |[Baidu_ULTR_Base_6L_12H_768Emb](https://drive.google.com/file/d/1Ft7DGH66fVOqQCMym57OeApp5NA2Y3Oc/view?usp=sharing)|
-| **Layer=3** |[Baidu_ULTR_Base_3L_12H_768Emb](https://drive.google.com/file/d/1Ft7DGH66fVOqQCMym57OeApp5NA2Y3Oc/view?usp=sharing)|
+| **Layer=12** |[Baidu_ULTR_Base_12L_12H_768Emb](https://drive.google.com/file/d/18hyiI_e3TfMjiDheLe_hoS4j4SnR-0Dg/view?usp=sharing)|
+| **Layer=6** |[Baidu_ULTR_Base_6L_12H_768Emb](https://drive.google.com/file/d/11KjzJDou4pjMJC0actjfsCSpBVF8ng-b/view?usp=sharing)|
+| **Layer=3** |[Baidu_ULTR_Base_3L_12H_768Emb](https://drive.google.com/file/d/1mXaiYpQ01FGS-eYKiPCgoOPYKJd8Gq77/view?usp=sharing)|
 
 ### Train Data --- Large Scale Web Search Session Data
 The large scale web search session are aviable at [here](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing).

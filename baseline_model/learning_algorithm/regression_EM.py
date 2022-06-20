@@ -12,7 +12,7 @@ from __future__ import print_function
 
 import torch.nn as nn
 import torch
-# from torch.utils.tensorboard import SummaryWriter
+
 
 from baseline_model.learning_algorithm.base_algorithm import BaseAlgorithm
 import baseline_model.utils as utils
@@ -89,8 +89,7 @@ class RegressionEM(BaseAlgorithm):
             self.labels_name.append("label{0}".format(i))
         with torch.no_grad():
             self.propensity = (torch.ones([1, self.rank_list_size]) * 0.9)
-            if self.is_cuda_avail:
-                self.propensity = self.propensity.to(device=self.cuda)
+            self.propensity = self.propensity.cuda()
         self.learning_rate = float(self.hparams.learning_rate)
         self.global_step = 0
         self.sigmoid_prob_b = (torch.ones([1]) - 1.0)

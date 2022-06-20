@@ -8,7 +8,7 @@ from __future__ import print_function
 
 import torch
 import torch.nn as nn
-# from torch.utils.tensorboard import SummaryWriter
+
 
 from baseline_model.learning_algorithm.base_algorithm import BaseAlgorithm
 import baseline_model.utils as utils
@@ -35,9 +35,6 @@ class NavieAlgorithm(BaseAlgorithm):
             l2_loss=0.0,
             grad_strategy='ada',            # Select gradient strategy
         )
-        self.is_cuda_avail = torch.cuda.is_available()
-        # self.writer = SummaryWriter()
-        self.cuda = torch.device('cuda')
         self.train_summary = {}
         self.eval_summary = {}
         self.is_training = "is_train"

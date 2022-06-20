@@ -51,9 +51,9 @@ class PairDebias(BaseAlgorithm):
         print('Build Pairwise Debiasing algorithm.')
 
         self.hparams = utils.hparams.HParams(
-            EM_step_size=exp_settings['lr'],                  # Step size for EM algorithm.
-            learning_rate=0.005,                 # Learning rate.
-            max_gradient_norm=0.5,            # Clip gradients to this norm.
+            EM_step_size=exp_settings['lr']*10,                  # Step size for EM algorithm.
+            learning_rate=exp_settings['lr'],                 # Learning rate.
+            max_gradient_norm=5.0,            # Clip gradients to this norm.
             # An int specify the regularization term.
             regulation_p=1,
             # Set strength for L2 regularization.
@@ -152,11 +152,12 @@ class PairDebias(BaseAlgorithm):
                 self.loss += pair_loss / \
                              self.splitted_t_plus[i] / self.splitted_t_minus[j]
 
+
         with torch.no_grad():
             self.t_plus = (1 - self.hparams.EM_step_size) * self.t_plus + self.hparams.EM_step_size * torch.pow(
-                    torch.cat(t_plus_loss_list, dim=1) / t_plus_loss_list[0], 1 / (self.hparams.regulation_p + 1))
+                    torch.cat(t_plus_loss_list, dim=1) / (t_plus_loss_list[0]+10e-9), 1 / (self.hparams.regulation_p + 1))
             self.t_minus = (1 - self.hparams.EM_step_size) * self.t_minus + self.hparams.EM_step_size * torch.pow(torch.cat(
-                    t_minus_loss_list, dim=1) / t_minus_loss_list[0], 1 / (self.hparams.regulation_p + 1))
+                    t_minus_loss_list, dim=1) / (t_minus_loss_list[0]+10e-9), 1 / (self.hparams.regulation_p + 1))
 
         # Add l2 loss
         params = self.model.parameters()

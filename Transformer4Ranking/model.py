@@ -9,7 +9,6 @@ import torch
 from torch import nn, Tensor
 import torch.nn.functional as F
 from torch.nn import TransformerEncoder, TransformerEncoderLayer
-from utils import *
 from torch.optim.lr_scheduler import LambdaLR
 from args import config
 

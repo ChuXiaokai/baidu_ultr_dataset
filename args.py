@@ -60,7 +60,7 @@ config.exp_settings = {
     'method_name': config.method_name,
     'n_gpus': config.n_gpus,
     'init_parameters': config.init_parameters,
-    'lr': config.end_learning_rate,
+    'lr': config.lr,
     'max_candidate_num': config.num_candidates,
     'selection_bias_cutoff': config.num_candidates,  # same as candidate num
     'feature_size': config.emb_dim,

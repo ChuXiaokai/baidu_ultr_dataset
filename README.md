@@ -40,7 +40,7 @@ You can download the pre-trained language model from the table below:
 | **Layer=3** |[Baidu_ULTR_Base_3L_12H_768Emb](https://drive.google.com/file/d/1f9F3eN0V20iCtoxNMkrPDSSZss5nno8C/view?usp=sharing)|
 
 ### Train Data --- Large Scale Web Search Session Data
-The large scale web search session are aviable at [here](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing).
+The large scale web search session are available at [here](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing).
 The search session is organized as:
 ```
 Qid, Query, Query Reformulation
@@ -55,20 +55,20 @@ Pos N, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 |Column Id|Explaination|Remark|
 |:---|:---|:---|
 |Qid|query id||
-|Query|The user issued query|Sequential token ids seprated by "\x01".|
-|Query Reformulation|The subsequent queries issued by users under the same search goal.|Sequential token ids seprated by "\x01".|
+|Query|The user issued query|Sequential token ids separated by "\x01".|
+|Query Reformulation|The subsequent queries issued by users under the same search goal.|Sequential token ids separated by "\x01".|
 |Pos|The document’s displaying order on the screen.|\[1,30\]|
 |Url_md5|The md5 for identifying the url||
-|Title|The title of document.|Sequential token ids seprated by "\x01".|
-|Abstract|A query-related brief introduction of document under the title.|Sequential token ids seprated by "\x01".|
+|Title|The title of document.|Sequential token ids separated by "\x01".|
+|Abstract|A query-related brief introduction of the document under the title.|Sequential token ids separated by "\x01".|
 |Multimedia Type|The type of url, for example, advertisement, videos, maps.|int|
-|Click|Whether user clicked the document.|\[0,1\]|
+|Click|Whether the user clicked the document.|\[0,1\]|
 |-|-|-|
 |-|-|-|
-|Skip|Whether user skipped the document on the screen.|\[0,1\]|
+|Skip|Whether the user skipped the document on the screen.|\[0,1\]|
 |SERP Height|The vertical pixels of SERP on the screen.|Continuous Value|
 |Displayed Time|The document's display time on the screen.|Continuous Value|
-|Displayed Time Middle|The document’s display time on the middle 1/3 of screen.|Continuous Value|
+|Displayed Time Middle|The document’s display time on the middle 1/3 of the screen.|Continuous Value|
 |First Click|The identifier of users’ first click in a query.|\[0,1\]|
 |Displayed Count|The document’s display count on the screen.|Discrete Number|
 |SERP's Max Show Height|The max vertical pixels of SERP on the screen.|Continuous Value|
@@ -78,7 +78,7 @@ Pos N, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 |SERP to Top|The vertical pixels of the SERP to the top of the screen.|Continuous Value|
 |Displayed Count Top|The document’s display count on the top 1/3 of screen.|Discrete Number|
 |Displayed Count Bottom|The document’s display count on the bottom 1/3 of screen.|Discrete Number|
-|Slipoff Count|The count of document being sliped off the screen.||
+|Slipoff Count|The count of document being slipped off the screen.||
 |-|-|-|
 |Final Click |The identifier of users’ last click in a query session.||
 |Displayed Time Bottom|The document’s display time on the bottom 1/3 of screen.|Continuous Value|
@@ -95,11 +95,11 @@ The expert annotation dataset is aviable at [here](https://drive.google.com/driv
 The Schema of the [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
 |Columns|Explaination|Remark|
 |:---|:---|:---|
-|Query|The user issued query|Sequential token ids seprated by "\x01".|
-|Title|The title of document.|Sequential token ids seprated by "\x01".|
-|Abstract|A query-related brief introduction of document under the title.|Sequential token ids seprated by "\x01".|
+|Query|The user issued query|Sequential token ids separated by "\x01".|
+|Title|The title of document.|Sequential token ids separated by "\x01".|
+|Abstract|A query-related brief introduction of the document under the title.|Sequential token ids separated by "\x01".|
 |Label|Expert annotation label.|\[0,4\]|
-|Bucket|The queries are descendingly split into 10 buckets according to their monthly search frequency, i.e., bucket 0, bucket 1, and bucket 2 are high frequency queries while bucket 7, bucket 8, and bucket 9 are the tail queries|\[0,9\]|
+|Bucket|The queries are descendingly split into 10 buckets according to their monthly search frequency, i.e., bucket 0, bucket 1, and bucket 2 are high-frequency queries while bucket 7, bucket 8, and bucket 9 are the tail queries|\[0,9\]|
 
 The [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) is a unigram set that records the high-frequency words using the desensitization token id.
 

@@ -31,6 +31,11 @@ token_encoder = TransformerModel(
     mode='finetune'
 )
 
+# load pretrained model
+if config.init_parameters != "":
+    print('load warm up model ', config.init_parameters)
+    token_encoder.load_state_dict(torch.load(config.init_parameters))
+
 method_str = exp_settings['method_name']
 if method_str not in ['IPWrank', 'DLA', 'RegressionEM', 'PairDebias', 'NavieAlgorithm']:
     print("please choose a method in 'IPWrank', 'DLA', 'RegressionEM', 'PairDebias', 'NavieAlgorithm'")

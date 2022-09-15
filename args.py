@@ -43,6 +43,12 @@ parser.add_argument("--save_step", type=int, default=5000, help='The number of i
 # parameter for baseline models in finetune
 parser.add_argument("--method_name", type=str, default="NavieAlgorithm", help='The name of baseline. candidates: [IPWrank, DLA, RegressionEM, PairDebias, NavieAlgorithm]')
 
+# for submission
+parser.add_argument("--test_annotate_path", type=str, default='./data/wsdm_round_1/wsdm_test_1.txt', help="The path of the test annotated data.")
+parser.add_argument("--evaluate_model_path", type=str, default='', help="The path of saved model.")
+parser.add_argument("--result_path", type=str, default='result.csv', help="The path of saving submitting results.")
+
+
 config = parser.parse_args()
 
 config._CLS_ = 0

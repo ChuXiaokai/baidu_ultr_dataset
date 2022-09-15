@@ -95,6 +95,7 @@ The expert annotation dataset is aviable at [here](https://drive.google.com/driv
 The Schema of the [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
 |Columns|Explaination|Remark|
 |:---|:---|:---|
+|Qid|The uniq id for every query.| An uniq id.|
 |Query|The user issued query|Sequential token ids separated by "\x01".|
 |Title|The title of document.|Sequential token ids separated by "\x01".|
 |Abstract|A query-related brief introduction of the document under the title.|Sequential token ids separated by "\x01".|

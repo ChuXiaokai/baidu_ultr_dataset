@@ -5,6 +5,15 @@
 # Mail: zoulixin15@gmail.com
 # Created Time: Tue Sep 13 23:21:03 2022
 
+#### Demo submission to WSDM Cup 2023 #####
+# Step 1:
+# Get the prediction score of model.
+# > ``` python submit.py --emb_dim 768 --nlayer 12 --nhead 12 --dropout 0.1 --eval_batch_size 100 --test_annotate_path ./data/wsdm_round_1/wsdm_test_1.txt```
+# To be noticed, the prediction score file must be ended with csv. Otherwise, the evaluation may fail.
+# Step 2:
+# Compress the prediction score file to zip file and submit the competition page.
+
+
 from baseline_model.utils.sys_tools import find_class
 import torch
 import numpy as np

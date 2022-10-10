@@ -9,7 +9,10 @@ This code requires the following:
 ### Quick Start
 
 #### 0. Prepare the corpus
-Suppose your have downloaded [the Web Search Session Data](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing) (training data) and [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing) (test data).
+Suppose your have downloaded [the Web Search Session Data](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing) (training data) and [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing) (test data) on Google drive.
+
+Moreover, we provide the resource for those who cannot access google drive. [training data](https://searchscience.baidu.com/dataset_ultr_train.html) [test data](http://shorturl.at/en259) [unigram dict](http://shorturl.at/fnRZ2).
+
 
 First, move all the zip file into dir './data/train_data/', e.g.,
 > ```mv yourpath/*.gz ./data/train_data/```

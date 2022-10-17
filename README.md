@@ -9,9 +9,9 @@ This code requires the following:
 ### Quick Start
 
 #### 0. Prepare the corpus
-Suppose your have downloaded [the Web Search Session Data](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing) (training data) and [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing) (test data) on Google drive.
+Suppose your have downloaded [the Web Search Session Data](https://drive.google.com/drive/folders/1Q3bzSgiGh1D5iunRky6mb89LpxfAO73J?usp=sharing) (training data) and [annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing) (test data) on Google drive.
 
-Moreover, we provide the resource for those who cannot access google drive. [training data](https://searchscience.baidu.com/dataset_ultr_train.html) [test data](https://searchscience.baidu.com/baidu_ultr/labeled_dataset/nips_annotation_data_0522.txt) [unigram dict](https://searchscience.baidu.com/baidu_ultr/labeled_dataset/unigram_dict_0510_tokens.txt).
+Moreover, we provide the resource for those who cannot access google drive. [training data](https://searchscience.baidu.com/dataset_ultr_train.html) [test data](https://searchscience.baidu.com/baidu_ultr/labeled_dataset/annotation_data_0522.txt) [unigram dict](https://searchscience.baidu.com/baidu_ultr/labeled_dataset/unigram_dict_0510_tokens.txt).
 
 
 First, move all the zip file into dir './data/train_data/', e.g.,
@@ -20,7 +20,7 @@ First, move all the zip file into dir './data/train_data/', e.g.,
 Second, move the file **part-00000.gz** into './data/click_data/', we will treat it as one of the validation set.
 > ```mv ./data/train_data/part-00000.gz ./data/click_data/part-00000.gz``` 
 
-Finally, split the annotated data [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing) into test and validation set. Move them into dir './data/annotate_data/'
+Finally, split the annotated data [annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing) into test and validation set. Move them into dir './data/annotate_data/'
 > ```mv test_data.txt ./data/annotate_data/```
 > ```mv val_data.txt ./data/annotate_data/```
 
@@ -95,7 +95,7 @@ Pos N, URL MD5, Title, Abstract, Multimedia Type, Click, -, -, Skip, SERP Height
 
 ### Test Data --- Expert Annotation Dataset for Validation, 
 The expert annotation dataset is aviable at [here](https://drive.google.com/drive/folders/1AmLTDNVltS02cBMIVJJLfVc_xIrLA2cL?usp=sharing).
-The Schema of the [nips_annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
+The Schema of the [annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
 |Columns|Explaination|Remark|
 |:---|:---|:---|
 |Qid|The uniq id for every query.| An uniq id.|

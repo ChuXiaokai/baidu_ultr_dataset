@@ -34,7 +34,11 @@ token_encoder = TransformerModel(
 # load pretrained model
 if config.init_parameters != "":
     print('load warm up model ', config.init_parameters)
-    token_encoder.load_state_dict(torch.load(config.init_parameters))
+    if config.n_gpus > 1:
+        token_encoder.load_state_dict(torch.load(config.init_parameters))
+    else:
+        print(torch.load(config.init_parameters).keys())
+        token_encoder.load_state_dict(torch.load(config.init_parameters), strict=False)
 
 method_str = exp_settings['method_name']
 if method_str not in ['IPWrank', 'DLA', 'RegressionEM', 'PairDebias', 'NavieAlgorithm']:

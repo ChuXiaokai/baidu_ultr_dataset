@@ -49,7 +49,11 @@ model.cuda()
 # load pretrained model
 if config.init_parameters != "":
     print('load warm up model ', config.init_parameters)
-    model.load_state_dict(torch.load(config.init_parameters))
+    if config.n_gpus > 1:
+        model.load_state_dict(torch.load(config.init_parameters))
+    else:
+        print(torch.load(config.init_parameters).keys())
+        model.load_state_dict(torch.load(config.init_parameters), strict=False)
 
 # init optimization
 optimizer = torch.optim.Adam(model.parameters(), lr=config.lr, weight_decay=config.weight_decay)

@@ -37,7 +37,6 @@ if config.init_parameters != "":
     if config.n_gpus > 1:
         token_encoder.load_state_dict(torch.load(config.init_parameters))
     else:
-        print(torch.load(config.init_parameters).keys())
         token_encoder.load_state_dict(torch.load(config.init_parameters), strict=False)
 
 method_str = exp_settings['method_name']

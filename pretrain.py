@@ -52,7 +52,6 @@ if config.init_parameters != "":
     if config.n_gpus > 1:
         model.load_state_dict(torch.load(config.init_parameters))
     else:
-        print(torch.load(config.init_parameters).keys())
         model.load_state_dict(torch.load(config.init_parameters), strict=False)
 
 # init optimization

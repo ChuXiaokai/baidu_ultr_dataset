@@ -108,7 +108,7 @@ for train_batch in train_data_loader:
             f'pnr {result_dict_click["pnr"]:.6f}'
         )
         if idx % config.save_step == 0 and idx > 0:
-            torch.save(model.state_dict(),
+            torch.save(model.model.state_dict(),
                       'save_model/save_steps{}_{:.5f}_{:5f}.model'.format(idx, result_dict_ann['pnr'], result_dict_click['pnr'])
             )
         idx += 1

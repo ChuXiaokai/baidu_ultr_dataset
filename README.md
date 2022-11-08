@@ -107,5 +107,15 @@ The Schema of the [annotation_data_0522.txt](https://drive.google.com/file/d/1hd
 
 The [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) is a unigram set that records the high-frequency words using the desensitization token id.
 
+
+@inproceedings{
+    zou2022large,
+    title={A Large Scale Search Dataset for Unbiased Learning to Rank},
+    author={Lixin Zou and Haitao Mao andXiaokai Chu and Jiliang Tang and Wenwen Ye and Shuaiqiang Wang and Dawei Yin},
+    booktitle={NeurIPS 2022},
+    year={2022}
+}
+
+
 ### Contact
 To ask questions or report issues, please open an issue on the [issues tracker](https://github.com/ChuXiaokai/baidu_ultr_dataset/issues).

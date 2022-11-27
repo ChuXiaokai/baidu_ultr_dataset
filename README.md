@@ -98,12 +98,13 @@ The expert annotation dataset is aviable at [here](https://drive.google.com/driv
 The Schema of the [annotation_data_0522.txt](https://drive.google.com/file/d/1hdWRRSMrCnQxilYfjTx8RhW3XTgiSd9Q/view?usp=sharing):
 |Columns|Explaination|Remark|
 |:---|:---|:---|
-|Qid|The uniq id for every query.| An uniq id.|
+|Qid|The uniq id for every query.| An uniq id. **There are some queries (8% queries) with the same qids, which might slightly influence the ranking score. Please directly using the query as the indicator!**|
 |Query|The user issued query|Sequential token ids separated by "\x01".|
 |Title|The title of document.|Sequential token ids separated by "\x01".|
 |Abstract|A query-related brief introduction of the document under the title.|Sequential token ids separated by "\x01".|
 |Label|Expert annotation label.|\[0,4\]|
 |Bucket|The queries are descendingly split into 10 buckets according to their monthly search frequency, i.e., bucket 0, bucket 1, and bucket 2 are high-frequency queries while bucket 7, bucket 8, and bucket 9 are the tail queries|\[0,9\]|
+
 
 The [unigram_dict_0510_tokens.txt](https://drive.google.com/file/d/1HZ7l7UDMH9WvLVoDu-_uqLNjF5gtBe2g/view?usp=sharing) is a unigram set that records the high-frequency words using the desensitization token id.
 

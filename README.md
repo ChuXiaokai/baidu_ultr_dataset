@@ -1,6 +1,10 @@
 # A Large Scale Search Dataset from Baidu Search Engine
 This repo contains code & dataset accompaning the paper, [A Large Scale Search Dataset for Unbiased Learning to Rank](https://arxiv.org/pdf/2207.03051.pdf). 
 
+### Update
+The dataset is currently inaccessible for download due to legal restrictions with Baidu. 
+Should you require access to the dataset, please contact the author (zoulixin15 AT gmail.com) to request a private download link.
+
 ### Dependencies
 This code requires the following:
 - Python 3.6+
